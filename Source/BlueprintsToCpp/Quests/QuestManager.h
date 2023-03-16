@@ -16,10 +16,14 @@ class BLUEPRINTSTOCPP_API AQuestManager : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AQuestManager();
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void CompleteQuest(FName QuestId, bool CompleteWholeQuest);
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	UFUNCTION(BlueprintPure, BlueprintImplementableEvent)
+	int32 GetQuestIndex(FName QuestId);
 
 public:	
 	// Called every frame
