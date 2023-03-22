@@ -11,6 +11,11 @@ AQuestManager::AQuestManager()
 	UE_LOG(LogTemp, Warning, TEXT("QuestManager Constructor"));
 }
 
+FQuestInfo AQuestManager::GetQuest(FName Name) const
+{
+	return QuestList[GetQuestIndex(Name)];
+}
+
 void AQuestManager::CompleteQuest_Implementation(FName QuestId, bool CompleteWholeQuest)
 {
 	int32 QuestIndex = GetQuestIndex(QuestId);
