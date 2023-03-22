@@ -7,7 +7,7 @@
 #include "QuestInfo.h"
 #include "QuestManager.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCompletedQuestSignature, int32, Index)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCompletedQuestSignature, int32, Index);
 
 UCLASS()
 class BLUEPRINTSTOCPP_API AQuestManager : public AActor
