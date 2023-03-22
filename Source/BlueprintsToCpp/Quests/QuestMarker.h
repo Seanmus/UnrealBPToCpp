@@ -20,6 +20,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void RefreshVisibility();
+	virtual void BeginPlay() override;
+private:
+	UFUNCTION()
+	void QuestUpdate(int32 Index);
 
 protected:
 	UFUNCTION(BlueprintPure, BlueprintImplementableEvent)
